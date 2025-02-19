@@ -5,29 +5,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Culturama</title>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Work+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-        integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style/resete.css">
     <link rel="shortcut icon" href="./assets/img/Favicon2.png" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/style/grid.css">
-    <link rel="stylesheet" href="./assets/style/flex.css">
     <link rel="stylesheet" href="./assets/style/style.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul class="menu">
-                <li class="menu__item">
-                    <h1 class="menu__titulo"></h1>
-                </li>
-                <li class="menu__item"><a href="#" class="">Programação</a></li>
-                <li class="menu__item"> <a href="#">Categorias</a></li>
-                <li class="menu__item"><a href="#">Seu local</a></li>
+        <nav class="sm:flex pr-4 bg-stone-950 justify-evenly">
+            <div class="bg-stone-950 h-32 flex flex-wrap justify-center items-center pr-4  sm:min-h-[25vw] lg:min-h-[20vw]">
+                <h1 class="menu__titulo cursor-pointer"></h1>
+            </div>
+            <ul class="menu bg-stone-950 h-32 flex flex-wrap justify-center items-center gap-x-[9vw]  sm:min-h-[25vw] lg:flex-nowrap lg:gap-x-[3vw] lg:min-h-[20vw]">
 
-                <li class="menu__item menu__pesquisar">
+                <li class="menu__item"><a href="#" class="">Programação</a></li>
+                <li class="menu__item"><a href="#">Categorias</a></li>
+                <li class="menu__item"><a class="lg:text-nowrap" href="#">Seu local</a></li>
+
+                <li class="menu__item menu__pesquisar w-80">
                     <label class="menu__label" for="pesquisar"><input class="menu__input" type="search" name="" placeholder="O que você procura?"
                         id="pesquisar"></label>
                 </li>
@@ -35,18 +33,18 @@
         </nav>
     </header>
 
-    <main class="principal">
+    <main class="px-4">
 
-        <section class="banner">
-            <img src="./assets/img/banner1.png" alt="Banner cor amarela">
-            <img src="./assets/img/banner2.png" alt="Banner cor lilás">
-            <img src="./assets/img/banner3.png" alt="Banner cor verde">
-            <img src="./assets/img/banner4.png" alt="Banner cor laranja">
+        <section class="grid grid-cols-2 gap-4 ">
+            <img src="./assets/img/banner1.png" alt="Banner cor amarela" class="w-full col-span-2">
+            <img src="./assets/img/banner2.png" alt="Banner cor lilás" class="w-full">
+            <img src="./assets/img/banner3.png" alt="Banner cor verde" class="w-full col-start-1">
+            <img src="./assets/img/banner4.png" alt="Banner cor laranja" class="w-full row-span-2 row-start-2 col-start-2">
         </section>
 
         <section class="categorias">
             <h2 class="categorias__titulo">Categorias</h2>
-            <ul class="categorias__lista">
+            <ul class="categorias__lista flex flex-col gap-4">
                 <li class="categorias__item">Shows</li>
                 <li class="categorias__item">Teatro</li>
                 <li class="categorias__item">Festivais</li>
